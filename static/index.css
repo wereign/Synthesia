@@ -3,20 +3,10 @@ body{
     background-color: #9DD6DF
 }
 
-p{
-    text-align: center;
-    font-family: 'Source Code Pro', monospace;
-}
-
-ol {
-    text-align: left;
-    font-family: 'Source Code Pro', monospace;
-}
 .row{
     padding-top: .5%;
     padding-bottom: .5%;
 }
-
 
 input{
     padding: 0.2%;
