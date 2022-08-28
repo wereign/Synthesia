@@ -14,11 +14,10 @@ class Synthesia:
         # Operating on the image array to convert it to a 2D array
         # Transposing the array to make it playable
 
-        self.audio_array = self.image_array.transpose(2, 0, 1).reshape(3, -1).T
+        self.audio_array = self.image_array.flatten()
         self.match_types = []
         for i in self.audio_array:
-            for j in i:
-                self.match_types.append(float(j))
+                self.match_types.append(float(i))
 
     def play_audio(self):
 
@@ -30,6 +29,9 @@ class Synthesia:
         path = f'output/{file_no}'+file_name+'.wav'
         print(path)
 
-        file_no += 1
+        file_no +=1
         return path
+
+# synth = Synthesia('static/images/logo.png')
+# synth.save_file('test')
 
