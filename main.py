@@ -38,6 +38,6 @@ def home():
         return send_file(output_file_path,as_attachment=True)
     return render_template("index.html", form=form)
 
-
+# minor change to trigger redeploy
 if __name__ == "__main__":
     app.run(debug=True)
