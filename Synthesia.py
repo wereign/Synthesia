@@ -3,7 +3,7 @@ from numpy import asarray
 import sounddevice as sd
 import soundfile as sf
 
-
+file_no = 0
 class Synthesia:
     def __init__(self, image_path):
 
@@ -25,10 +25,11 @@ class Synthesia:
         sd.play(self.audio_array, blocking=True)
 
     def save_file(self, file_name):
+        global file_no
+        sf.write(f'output/{file_no}'+file_name+'.wav', self.match_types, self.sampling_frequency)
+        path = f'output/{file_no}'+file_name+'.wav'
+        print(path)
 
-        sf.write(file_name+'.wav', self.match_types, self.sampling_frequency)
+        file_no += 1
+        return path
 
-
-synth = Synthesia('syntheisia_block_1.png')
-synth.play_audio()
-synth.save_file('synth_audio1')

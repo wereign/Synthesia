@@ -1,0 +1,14 @@
+body{
+    padding-top: 5%;
+    background-color: #9DD6DF
+}
+
+.row{
+    padding-top: .5%;
+    padding-bottom: .5%;
+}
+
+input{
+    padding: 0.2%;
+    /* background-color: #DFBB9D; */
+}
